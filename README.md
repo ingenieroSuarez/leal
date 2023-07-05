@@ -32,5 +32,9 @@ $ npm run test:e2e
 
 ```
 
+## Diagrama de la base de datos: 
+
+![Diagrama de la base de datos](https://drive.google.com/file/d/1sYyEGUclap2wyQLe8baxZQLa-2K9IJND/view?usp=sharing)
+
 ## Desarrollado por:
 - [Juan Fernando Sánchez Suárez](https://www.linkedin.com/in/juanfernandosanchezsuarez/)
