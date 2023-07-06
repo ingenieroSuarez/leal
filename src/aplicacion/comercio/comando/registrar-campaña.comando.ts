@@ -8,16 +8,19 @@ export class ComandoRegistrarCampaña {
   public idComercio: number;
 
   @IsNumber()
+  @ApiProperty({ example: 1 })
+  public idSucursal: number;
+  @IsNumber()
   @ApiProperty({ example: 50000 })
   public valorCompra: number;
 
   @IsNumber()
-  @ApiProperty({ example: 1 })
-  public puntosLeal: number;
+  @ApiProperty({ example: 0.30 })
+  public multiplicadorPuntosLeal: number;
 
   @IsNumber()
-  @ApiProperty({ example: 1 })
-  public cashBackLeal: number;
+  @ApiProperty({ example: 0 })
+  public multiplicadorCashback: number;
 
   @IsNotEmpty()
   @IsDateString()

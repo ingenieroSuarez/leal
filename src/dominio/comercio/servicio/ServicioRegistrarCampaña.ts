@@ -8,7 +8,14 @@ export class ServicioRegistrarCampaña {
     private readonly _repositorioCampaña: RepositorioCampaña,
   ) {}
   async ejecutar(datosCampaña: ComandoRegistrarCampaña) {
-    console.log(datosCampaña);
-    await this._repositorioCampaña.registrar(datosCampaña)
+    const cashbackLeal= datosCampaña.multiplicadorCashback;
+    const puntosLeal=datosCampaña.multiplicadorPuntosLeal;
+    if(cashbackLeal===0 ){
+        datosCampaña.multiplicadorCashback=null;
+    };
+    if(puntosLeal===0){
+        datosCampaña.multiplicadorPuntosLeal=null;
+    };
+    await this._repositorioCampaña.registrar(datosCampaña);
   }
 }
