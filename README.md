@@ -39,5 +39,8 @@ para sincronizar el modelo con el motor de la base de datos simplemente se debe 
 
 También se puede ejecutar el script: 
 - https://drive.google.com/file/d/1MdfeG5okavbwMuZygpZ5WeB_9Rlbh7Ia/view?usp=sharing
+
+## Notas para entender el negocio:
+- https://drive.google.com/file/d/1YEwELE8MDGyO47Y8S-mg-q33_YIYWVc7/view?usp=sharing
 ## Desarrollado por:
 - [Juan Fernando Sánchez Suárez](https://www.linkedin.com/in/juanfernandosanchezsuarez/)
