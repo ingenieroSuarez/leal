@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { ComandoRegistrarVenta  } from './registrar-venta.comando';
-import { ServicioProcesarVenta } from 'src/dominio/ventas/servicio/ServicioRegistrarCampaña';
+import { ServicioProcesarVenta } from 'src/dominio/ventas/servicio/ServicioProcesarVenta';
 
 @Injectable()
 export class ManejadorProcesarVenta {
