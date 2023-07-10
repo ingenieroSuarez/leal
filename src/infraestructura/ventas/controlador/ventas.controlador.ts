@@ -1,13 +1,14 @@
 import { Controller,  Post, Body, UsePipes } from '@nestjs/common';
-import { ApiTags } from '@nestjs/swagger';
+import { ApiTags, ApiBody } from '@nestjs/swagger';
+import { ComandoRegistrarVenta } from 'src/aplicacion/ventas/comando/registrar-venta.comando';
 
 @ApiTags('Ventas')
 @Controller('Ventas')
 export class VentasControlador {
-  
+
     @Post('registrar')
-    async registrarVenta(@Body() datosVenta: any) {
-        console.log(datosVenta);
-      return "registrarVenta"
+    @ApiBody({ type: ComandoRegistrarVenta })
+    async registrarVenta(@Body() datosVenta: ComandoRegistrarVenta) {
+      return datosVenta
     }
 }

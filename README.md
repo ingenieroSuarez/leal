@@ -3,8 +3,8 @@
 
 - Proyecto implementado con arquitectura hexagonal, patrones CQRS, puerto adaptador y command.
 - Documentación: swagger en el path /api/doc, si se despliega en lo cal la url es: http://127.0.0.1:3000/api/doc
-- Libreria de class validator y class transform para integridad de los datos que llegan a las rutas
-
+- Libreria de class validator y class transform para integridad de los datos que llegan a las rutas.
+- Estrategia de desarrollo: Database-First.
 ## instalación
 
 ```bash
