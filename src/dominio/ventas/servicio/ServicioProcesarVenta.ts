@@ -32,13 +32,13 @@ export class ServicioProcesarVenta {
         await this._repositorioPuntos.guardar(puntos, idUsuario );
       }
       const configuracionCashBack = "  IMPLEMENTAR....";
-      if( configuracionCashBack ) this.calcularCashback(valorVenta, campañaSucursal, campañaComercio, configuracionCashBack);
+      if( configuracionCashBack ){
+        this.calcularCashback(valorVenta, campañaSucursal, campañaComercio, configuracionCashBack);
+      } 
       return await this._repositorioVentas.registrar(datosVenta);
     };
 
     private calcularCashback(valorVenta: number, campañaSucursal: any, campañaComercio: any, configuracionCashBack: any){
       return true;
     }
-
-
 }
