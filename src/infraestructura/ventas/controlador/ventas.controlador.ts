@@ -1,7 +1,7 @@
-import { Controller,  Post, Body, UsePipes } from '@nestjs/common';
+import { Controller,  Post, Body } from '@nestjs/common';
 import { ApiTags, ApiBody } from '@nestjs/swagger';
-import { ComandoRegistrarVenta } from 'src/aplicacion/ventas/comando/registrar-venta.comando';
-import { ManejadorProcesarVenta } from 'src/aplicacion/ventas/comando/registrar-venta.manejador';
+import { ComandoProcesarVenta } from 'src/aplicacion/ventas/comando/procesar-venta.comando';
+import { ManejadorProcesarVenta } from 'src/aplicacion/ventas/comando/procesar-venta.manejador';
 
 @ApiTags('Ventas')
 @Controller('Ventas')
@@ -10,8 +10,8 @@ export class VentasControlador {
     private readonly _manejadorProcesarVenta: ManejadorProcesarVenta
   ){}
     @Post('registrar')
-    @ApiBody({ type: ComandoRegistrarVenta })
-    async registrarVenta(@Body() datosVenta: ComandoRegistrarVenta) {
+    @ApiBody({ type: ComandoProcesarVenta })
+    async registrarVenta(@Body() datosVenta: ComandoProcesarVenta) {
       return await this._manejadorProcesarVenta.ejecutar( datosVenta )
     }
 }

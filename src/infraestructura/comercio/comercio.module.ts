@@ -32,6 +32,10 @@ const daoCampaña = {
       ServicioListarCampaña,
       repositorioCampaña,
       daoCampaña
+    ],
+    exports:[
+      ServicioListarCampaña
     ]
+
   })
   export class ComercioModule {}

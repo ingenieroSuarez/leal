@@ -1,7 +1,7 @@
 import { IsNotEmpty, IsNumber, IsString } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
 
-export class ComandoRegistrarVenta {
+export class ComandoProcesarVenta {
   @IsNumber()
   @IsNotEmpty()
   @ApiProperty({ example: 1 })
