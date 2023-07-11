@@ -6,6 +6,7 @@ import { configuracion_puntos } from './entidad/configuracion-puntos.entidad';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { RepositorioPuntos } from 'src/dominio/puntos/puerto/repositorio/repositorio-puntos';
 import { repositorioPuntosMysl } from './adaptador/repositorio/repositorio-puntos-mysql';
+import { ServicioCalcularPuntos } from 'src/dominio/puntos/servicio/servicio-calcular-puntos';
 
 const daoPuntos = {
   provide: DaoPuntos,
@@ -24,11 +25,13 @@ const repositorioPuntos= {
     controllers: [PuntosControlador],
     providers:[
       daoPuntos,
-      repositorioPuntos
+      repositorioPuntos,
+      ServicioCalcularPuntos
     ],
     exports:[
       daoPuntos,
-      repositorioPuntos
+      repositorioPuntos,
+      ServicioCalcularPuntos
     ]
   })
   export class PuntosModule {}
